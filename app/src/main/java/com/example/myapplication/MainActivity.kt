@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
             MaterialTheme {
                 var result by remember { mutableStateOf("等待请求") }
                 var busy by remember { mutableStateOf(false) }
-                InspectionScreen("教学验证", "A203", 10, 3, result, busy) { room ->
+                InspectionScreen("教学验证", "A203", 10, 5, result, busy) { room ->
                     busy = true
                     result = "请求中：$room"
                     Thread {
